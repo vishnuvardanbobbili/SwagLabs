@@ -62,7 +62,7 @@ class Test_01_Admin_Login:
         self.admin_lp.click_login()
         actual_dashboard_text = self.driver.find_element(By.XPATH, "//h3[@data-test='error']").text
         if actual_dashboard_text == "Epic sadface: Username and password do not match any user in this service":
-            self.logger.info("******************Invalid login successful***********************")
+            self.logger.info("******************Invalid login is successful***********************")
             assert True
             self.driver.save_screenshot("./screenshots/invalid_admin_login.png")
             self.driver.quit()
